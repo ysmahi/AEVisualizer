@@ -10,7 +10,8 @@
   "dependencies": {
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "xlsx": "^0.13.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-rc.11",

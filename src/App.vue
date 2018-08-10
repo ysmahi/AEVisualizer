@@ -1,12 +1,39 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+      <AppBarWithTabs
+          :nameAppBar="nameAppBar"
+          :dataTabs="dataTabs">
+      </AppBarWithTabs>
+
+      <div class="pageContent">
+      </div>
   </div>
 </template>
+
+<script>
+    import AevRaw from './views/AevRaw'
+    import AevLive from './views/AevLive'
+    import DataReformatView from './views/DataReformaterView'
+    import AppBarWithTabs from './components/GenericComponents/AppBarWithTabs'
+
+  export default {
+    name: 'app',
+    components: {AppBarWithTabs},
+    data () {
+      return {
+        nameAppBar: 'AEVisualizer',
+        dataTabs: [
+          {name: 'AEV Raw',
+            component: AevRaw},
+          {name: 'AEV Live',
+          component: AevLive},
+          {name: 'Data Reformater',
+          component: DataReformatView}
+        ]
+      }
+    }
+  }
+</script>
 
 <style>
 #app {
