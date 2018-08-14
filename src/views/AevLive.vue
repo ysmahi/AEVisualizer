@@ -19,14 +19,20 @@
         </div>
         <div id="chart">
         </div>
+        <PictureDownloader v-if="aFileIsSelected">
+        </PictureDownloader>
     </div>
 </template>
 
 <script>
     import { mapData, drawChart } from '../charts/roadMap'
+    import PictureDownloader from '../components/AevLive/PictureDownloader'
 
   export default {
     name: 'AevLive',
+    components: {
+      PictureDownloader
+    },
     data () {
       return {
         selectedFile: '',
