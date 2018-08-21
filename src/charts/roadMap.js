@@ -613,7 +613,7 @@ export function drawChart (idSelection, data) {
   /* Function to draw all elements on the graph
   * typeOfElement can be 'multi' for big rectangle elements or 'single' for unique cell elements
    * that will be drawn as circles */
-  function draw(elementsData, gridSelection, elementHeight) {
+  function draw (elementsData, gridSelection, elementHeight) {
     let dataElements = createElementsPositionData(elementsData, elementHeight)
 
     let elementsSpace = gridSelection.append('svg')
