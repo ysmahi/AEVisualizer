@@ -1,4 +1,5 @@
 # aevisualizer
+Automatisation de la création de visuels
 
 ## Project setup
 ```
